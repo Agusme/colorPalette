@@ -12,9 +12,7 @@ import Color from "../PaletaColores/Color";
 import CardColors from "../cardColor/CardColors";
 
 const FormColor = () => {
-  let colorsFormLocalStorage =
-    JSON.parse(localStorage.getItem("colorList")) || [];
-
+  let colorsFormLocalStorage = JSON.parse(localStorage.getItem("colorList")) || [];
   const [color, setColor] = useState("");
   const [colors, setColors] = useState(colorsFormLocalStorage);
   const [alert, setAlert]= useState(false)
@@ -28,7 +26,6 @@ const FormColor = () => {
     if (color.trim() !== "") {
       if (colors.includes(color)) {
         setAlert(true);
-        setTimeout(() => setAlert(false), 3000);
         setColor("");
 
       } else {
@@ -57,7 +54,7 @@ let  filterColor = colors.filter((color)=> color !== colorDelete)
                 <Form.Control
                   aria-label="Small"
                   aria-describedby="inputGroup-sizing-sm"
-                  placeholder="Ingrese un color"
+                  placeholder="Ingrese un color ej: blue"  
                   onChange={(e) => {
                     setColor(e.target.value);
                   }}
