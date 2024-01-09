@@ -43,11 +43,11 @@ let  filterColor = colors.filter((color)=> color !== colorDelete)
   return (
     <Container>
       <Card className="mt-3">
-        <Card.Header>Administrar colores</Card.Header>
+        <Card.Header className="bg-black text-white">Administrar colores</Card.Header>
         <Card.Body>
-          <Row className="bg-info p-3">
+          <Row className="bg-white p-3">
             <Col xl={3} lg={4} md={6}>
-              <Color color={color} ></Color>
+              <Color color={color} style={{ backgroundColor: color }}></Color>
             </Col>
             <Col xl={9} lg={8} md={6} className="pt-4">
               <Form onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ let  filterColor = colors.filter((color)=> color !== colorDelete)
             </Col>
           </Row>
           <div className="d-flex justify-content-end mt-3">
-                <Button variant="primary" onClick={handleSubmit}>
+                <Button variant="dark" onClick={handleSubmit}>
                   Guardar
                 </Button>
               </div>
