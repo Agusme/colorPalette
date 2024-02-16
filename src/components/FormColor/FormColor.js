@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import Color from "../PaletaColores/Color";
 import CardColors from "../cardColor/CardColors";
-
 const FormColor = () => {
   let colorsFormLocalStorage = JSON.parse(localStorage.getItem("colorList")) || [];
   const [color, setColor] = useState("");
@@ -41,8 +40,8 @@ let  filterColor = colors.filter((color)=> color !== colorDelete)
 }
 
   return (
-    <Container>
-      <Card className="mt-3">
+    <Container className="pt-5">
+      <Card>
         <Card.Header className="bg-black text-white">Administrar colores</Card.Header>
         <Card.Body>
           <Row className="bg-white p-3">
